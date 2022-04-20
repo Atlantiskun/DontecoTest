@@ -342,9 +342,10 @@ extension MainViewController: MPMediaPickerControllerDelegate {
                     callAlertProtected()
                 } else {
                     firstTrack = track
-                    let localMaxFade = Double((track.playbackDuration / 2).rounded(.down))
+                    let localMaxFade = Double((track.playbackDura	tion / 2).rounded(.down))
                     maxFade = localMaxFade < maxFade ? localMaxFade : maxFade
                 }
+                wasProcessed = false
                 setupView(with: firstTrack)
                 changeChooseTrackButton(withTag: lastButtonPressed, andHasProtected: track.hasProtectedAsset)
             } else {
@@ -356,6 +357,7 @@ extension MainViewController: MPMediaPickerControllerDelegate {
                     let localMaxFade = Double((track.playbackDuration / 2).rounded(.down))
                     maxFade = localMaxFade < maxFade ? localMaxFade : maxFade
                 }
+                wasProcessed = false
                 if firstTrack == nil {
                     setupView(with: secondTrack)
                 }
