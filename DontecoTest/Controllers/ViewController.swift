@@ -84,7 +84,7 @@ class MainViewController: UIViewController {
     
     private let crossfadeSliderValue: UILabel = {
         let label = UILabel()
-        label.text = "Crossdafe is 2 sec"
+        label.text = "Crossfade is 2 sec"
         label.font = UIFont.systemFont(ofSize: 20)
         return label
     }()
@@ -92,7 +92,7 @@ class MainViewController: UIViewController {
     // MARK: - Button's actions
     @objc private func changeСrossfadeSliderValue(_ sender: UISlider) {
         currentFade = Double(sender.value * 10).rounded()
-        crossfadeSliderValue.text = "Crossdafe is \(Int(currentFade)) sec"
+        crossfadeSliderValue.text = "Crossfade is \(Int(currentFade)) sec"
     }
     
     @objc private func chooseTrack(_ sender: UIButton) {
